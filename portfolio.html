@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio & Projects | DreamHome Interior & Design</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR / HEADER ================= -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-mark"><i class="fa-solid fa-compass-drafting"></i></span>
+                <div class="logo-text">
+                    <span class="brand-name">Dream<span>Home</span></span>
+                    <span class="brand-sub">Interior & Design</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link active">Portfolio</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Action Controls (Dark Mode & Ask Question) -->
+            <div class="nav-actions">
+                <!-- Theme Switcher Button -->
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle dark mode" title="Dark / Light Mode">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+
+                <!-- Message Inquiry Button with Hover WhatsApp Options -->
+                <div class="nav-msg-wrapper" id="navMsgWrapper">
+                    <button class="nav-msg-btn" id="navMsgBtn" aria-label="Message Inquiry" title="Message Inquiry">
+                        <i class="fa-regular fa-comment-dots"></i>
+                        <span class="nav-msg-text">Inquiry</span>
+                        <span class="msg-dot"></span>
+                    </button>
+                    <div class="nav-msg-dropdown" id="navMsgDropdown">
+                        <div class="dropdown-header">
+                            <div class="dropdown-msg-icon"><i class="fa-solid fa-comments"></i></div>
+                            <div>
+                                <strong>Inquiry through WhatsApp</strong>
+                                <span>Online | Instant Response</span>
+                            </div>
+                        </div>
+                        <div class="dropdown-items">
+                            <a href="https://wa.me/923001234567?text=Hello%20DreamHome!%20I%20have%20a%20general%20interior%20design%20inquiry." target="_blank" rel="noopener" class="dropdown-item">
+                                <i class="fa-regular fa-comment-dots"></i>
+                                <div>
+                                    <strong>General Inquiry</strong>
+                                    <small>Chat directly on WhatsApp</small>
+                                </div>
+                            </a>
+                            <a href="https://wa.me/923001234567?text=Hello%20DreamHome!%20I%20want%20to%20get%20an%20estimate%20and%20quotation%20for%20my%20interior." target="_blank" rel="noopener" class="dropdown-item">
+                                <i class="fa-solid fa-calculator"></i>
+                                <div>
+                                    <strong>Get Cost Estimate</strong>
+                                    <small>Send room sizes to get pricing quote</small>
+                                </div>
+                            </a>
+                            <a href="https://wa.me/923001234567?text=Hello%20DreamHome!%20I%20would%20like%20to%20book%20a%20site%20consultation%20visit." target="_blank" rel="noopener" class="dropdown-item">
+                                <i class="fa-regular fa-calendar-check"></i>
+                                <div>
+                                    <strong>Book Site Consultation</strong>
+                                    <small>Schedule an architect site visit</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ask Question Button in Header -->
+                <button class="btn btn-outline ask-btn" id="openAskModalBtn">
+                    <i class="fa-regular fa-circle-question"></i>
+                    <span>Ask Question</span>
+                </button>
+
+                <!-- Mobile Hamburger Icon -->
+                <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Drawer Overlay -->
+        <div class="nav-overlay" id="navOverlay"></div>
+    </header>
+
+    <!-- ================= PORTFOLIO HERO BANNER ================= -->
+    <section class="page-banner">
+        <div class="ambient-glow glow-hero-left"></div>
+        <div class="ambient-glow glow-hero-right"></div>
+        <div class="container banner-container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fa-solid fa-angle-right"></i>
+                <span>Our Portfolio</span>
+            </div>
+            <h1 class="page-title">Curated Gallery of <span class="title-highlight">Exquisite Spaces</span></h1>
+            <p class="page-subtitle">
+                Explore our signature residential and commercial interior projects across the region, where luxury architecture meets bespoke craftsmanship.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= PORTFOLIO SECTION WITH FILTER TABS ================= -->
+    <section class="portfolio-section">
+        <div class="container">
+            
+            <!-- Interactive Category Filter Tabs -->
+            <div class="portfolio-filters" id="portfolioFilters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="living">Living Rooms</button>
+                <button class="filter-btn" data-filter="kitchen">Modular Kitchens</button>
+                <button class="filter-btn" data-filter="bedroom">Master Bedrooms</button>
+                <button class="filter-btn" data-filter="commercial">Commercial & Offices</button>
+            </div>
+
+            <!-- Portfolio Projects Grid -->
+            <div class="portfolio-grid" id="portfolioGrid">
+
+                <!-- Project 1: Living Room -->
+                <div class="portfolio-card" data-category="living">
+                    <div class="portfolio-img-box">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=80" alt="The Grand Palm Villa Living Room">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Living Room</span>
+                            <h3>The Grand Palm Villa</h3>
+                            <p class="portfolio-meta"><i class="fa-solid fa-location-dot"></i> DHA Phase 6 | 4,500 sq.ft</p>
+                            <button class="portfolio-view-btn" 
+                                    data-title="The Grand Palm Villa" 
+                                    data-category="Luxury Living Room" 
+                                    data-location="DHA Phase 6" 
+                                    data-size="4,500 sq.ft" 
+                                    data-desc="Double-height luxury living lounge featuring Italian Statuario marble, custom brass cove lighting, acoustic wood fluting, and bespoke imported velvet seating." 
+                                    data-img="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80">
+                                <span>View Details</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Kitchen -->
+                <div class="portfolio-card" data-category="kitchen">
+                    <div class="portfolio-img-box">
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=80" alt="Minimalist Quartz Island Kitchen">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Modular Kitchen</span>
+                            <h3>Minimalist Quartz Kitchen</h3>
+                            <p class="portfolio-meta"><i class="fa-solid fa-location-dot"></i> Gulberg Greens | 650 sq.ft</p>
+                            <button class="portfolio-view-btn" 
+                                    data-title="Minimalist Quartz Kitchen" 
+                                    data-category="Italian Modular Kitchen" 
+                                    data-location="Gulberg Greens" 
+                                    data-size="650 sq.ft" 
+                                    data-desc="Seamless open-plan Italian kitchen with Calacatta quartz waterfall island, handle-less touch-to-open Blum cabinetry, integrated appliances, and warm LED profiles." 
+                                    data-img="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80">
+                                <span>View Details</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Master Bedroom -->
+                <div class="portfolio-card" data-category="bedroom">
+                    <div class="portfolio-img-box">
+                        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1000&q=80" alt="Opulent Master Suite">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Master Bedroom</span>
+                            <h3>The Royal Velvet Suite</h3>
+                            <p class="portfolio-meta"><i class="fa-solid fa-location-dot"></i> Bahria Town Penthouse | 800 sq.ft</p>
+                            <button class="portfolio-view-btn" 
+                                    data-title="The Royal Velvet Suite" 
+                                    data-category="Luxury Master Bedroom" 
+                                    data-location="Bahria Town Penthouse" 
+                                    data-size="800 sq.ft" 
+                                    data-desc="Master sanctuary designed with floor-to-ceiling upholstered headboards, concealed ambient architectural lighting, walk-in smoked glass wardrobe, and chevron wooden flooring." 
+                                    data-img="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80">
+                                <span>View Details</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Commercial -->
+                <div class="portfolio-card" data-category="commercial">
+                    <div class="portfolio-img-box">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80" alt="Executive HQ Corporate Suite">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Commercial & Office</span>
+                            <h3>Apex Corporate HQ</h3>
+                            <p class="portfolio-meta"><i class="fa-solid fa-location-dot"></i> Financial District | 12,000 sq.ft</p>
+                            <button class="portfolio-view-btn" 
+                                    data-title="Apex Corporate HQ" 
+                                    data-category="Commercial Architecture" 
+                                    data-location="Financial District" 
+                                    data-size="12,000 sq.ft" 
+                                    data-desc="Modern executive corporate offices featuring frameless double-glazed glass partitions, acoustic ceilings, high-end boardrooms, and bespoke reception design." 
+                                    data-img="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80">
+                                <span>View Details</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Living Room 2 -->
+                <div class="portfolio-card" data-category="living">
+                    <div class="portfolio-img-box">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Modernist Villa Skylight Lounge">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Living Room</span>
+                            <h3>Skylight Villa Residence</h3>
+                            <p class="portfolio-meta"><i class="fa-solid fa-location-dot"></i> Model Town | 3,800 sq.ft</p>
+                            <button class="portfolio-view-btn" 
+                                    data-title="Skylight Villa Residence" 
+                                    data-category="Modern Living Room" 
+                                    data-location="Model Town" 
+                                    data-size="3,800 sq.ft" 
+                                    data-desc="Architectural living area with natural skylight illumination, floating marble TV console, fluted wood partitions, and bespoke designer furniture." 
+                                    data-img="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80">
+                                <span>View Details</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Kitchen 2 -->
+                <div class="portfolio-card" data-category="kitchen">
+                    <div class="portfolio-img-box">
+                        <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1000&q=80" alt="Matte Charcoal & Oak Kitchen">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Modular Kitchen</span>
+                            <h3>Charcoal & Smoked Oak Kitchen</h3>
+                            <p class="portfolio-meta"><i class="fa-solid fa-location-dot"></i> Lake City | 520 sq.ft</p>
+                            <button class="portfolio-view-btn" 
+                                    data-title="Charcoal & Smoked Oak Kitchen" 
+                                    data-category="Modular Italian Kitchen" 
+                                    data-location="Lake City" 
+                                    data-size="520 sq.ft" 
+                                    data-desc="Dramatic matte black acrylic finishes combined with natural European smoked oak wood, smart sensor LED lighting, and concealed pantry pull-outs." 
+                                    data-img="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80">
+                                <span>View Details</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Bedroom 2 -->
+                <div class="portfolio-card" data-category="bedroom">
+                    <div class="portfolio-img-box">
+                        <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1000&q=80" alt="Neutral Scandinavian Bedroom">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Master Bedroom</span>
+                            <h3>Nordic Serenity Suite</h3>
+                            <p class="portfolio-meta"><i class="fa-solid fa-location-dot"></i> Askari 11 | 680 sq.ft</p>
+                            <button class="portfolio-view-btn" 
+                                    data-title="Nordic Serenity Suite" 
+                                    data-category="Scandinavian Bedroom" 
+                                    data-location="Askari 11" 
+                                    data-size="680 sq.ft" 
+                                    data-desc="Soothing neutral tones with textured lime-wash feature walls, linen curtains, brass reading lamps, and integrated dressing vanity." 
+                                    data-img="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=80">
+                                <span>View Details</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Commercial 2 -->
+                <div class="portfolio-card" data-category="commercial">
+                    <div class="portfolio-img-box">
+                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1000&q=80" alt="Luxury Fashion Boutique & Lounge">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category">Commercial & Office</span>
+                            <h3>Maison Haute Boutique</h3>
+                            <p class="portfolio-meta"><i class="fa-solid fa-location-dot"></i> MM Alam Road | 3,200 sq.ft</p>
+                            <button class="portfolio-view-btn" 
+                                    data-title="Maison Haute Boutique" 
+                                    data-category="Luxury Retail Boutique" 
+                                    data-location="MM Alam Road" 
+                                    data-size="3,200 sq.ft" 
+                                    data-desc="Ultra-luxurious fashion retail space featuring brushed gold hanging displays, terrazzo flooring, curved arches, and VIP fitting suites." 
+                                    data-img="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80">
+                                <span>View Details</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= SIGNATURE SHOWCASE (FEATURED HIGHLIGHT) ================= -->
+    <section class="signature-spotlight">
+        <div class="container">
+            <div class="spotlight-card">
+                <div class="spotlight-content">
+                    <span class="spotlight-badge"><i class="fa-solid fa-trophy"></i> Flagship Project of the Year</span>
+                    <h2>The Obsidian Penthouse, Dubai Marina</h2>
+                    <p>A masterpiece in modern luxury architecture. 7,200 square feet of uninterrupted skyline elegance crafted with Italian marble, custom brass architectural installations, and smart home automation.</p>
+                    <div class="spotlight-stats">
+                        <div class="spotlight-stat-item">
+                            <strong>7,200</strong>
+                            <span>Square Feet</span>
+                        </div>
+                        <div class="spotlight-stat-item">
+                            <strong>100%</strong>
+                            <span>Custom Turnkey</span>
+                        </div>
+                        <div class="spotlight-stat-item">
+                            <strong>6 Months</strong>
+                            <span>Project Timeline</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" id="spotlightInquireBtn">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Inquire About Similar Design</span>
+                    </button>
+                </div>
+                <div class="spotlight-image">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80" alt="The Obsidian Penthouse">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CTA BANNER ================= -->
+    <section class="services-cta-section">
+        <div class="container">
+            <div class="cta-banner-box">
+                <div class="cta-content">
+                    <h2>Want a Bespoke Masterpiece for Your Space?</h2>
+                    <p>Let's collaborate to craft an interior that reflects your prestige, taste, and lifestyle.</p>
+                </div>
+                <div class="cta-actions">
+                    <button class="btn btn-primary" id="openCtaModalBtn">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <span>Start Your Project</span>
+                    </button>
+                    <a href="https://wa.me/923001234567?text=Hello%20DreamHome!%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20my%20project." 
+                       target="_blank" 
+                       class="btn btn-glass">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Chat on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer" id="contact">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo-text">
+                    <span class="brand-name">Dream<span>Home</span></span>
+                    <span class="brand-sub">Interior & Design</span>
+                </div>
+                <p>Bringing dream interiors to reality with precision architecture, lighting, and interior craftsmanship.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Inquiries</h4>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info@dreamhomeinterior.com">info@dreamhomeinterior.com</a></p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:+923001234567">+92 300 1234567</a></p>
+                <p><i class="fa-solid fa-location-dot"></i> Gulberg III, Lahore, Pakistan</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 DreamHome Interior & Design. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ================= PROJECT DETAILS LIGHTBOX MODAL ================= -->
+    <div class="modal-backdrop" id="projectModal">
+        <div class="modal-box project-modal-box">
+            <button class="modal-close" id="closeProjectModalBtn" aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="project-modal-img">
+                <img id="projectModalImg" src="" alt="Project Photo">
+            </div>
+            <div class="project-modal-info">
+                <span class="portfolio-category" id="projectModalCat">Category</span>
+                <h3 id="projectModalTitle">Project Title</h3>
+                <p class="portfolio-meta" id="projectModalMeta"><i class="fa-solid fa-location-dot"></i> Location & Size</p>
+                <p class="project-modal-desc" id="projectModalDesc">Description</p>
+                <button class="btn btn-primary" id="projectModalInquireBtn">
+                    <span>Inquire for Similar Project</span>
+                    <i class="fa-solid fa-comment-dots"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= ASK QUESTION MODAL POPUP ================= -->
+    <div class="modal-backdrop" id="askModal">
+        <div class="modal-box">
+            <button class="modal-close" id="closeAskModalBtn" aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fa-regular fa-comments"></i>
+                </div>
+                <h3>Ask a Question</h3>
+                <p>Have an idea or need an estimate for your dream space? Send us a quick query!</p>
+            </div>
+            
+            <form id="askForm" class="modal-form">
+                <div class="form-group">
+                    <label for="userName">Your Full Name</label>
+                    <input type="text" id="userName" placeholder="e.g. Ali Ahmed" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="userPhone">Phone / WhatsApp Number</label>
+                    <input type="tel" id="userPhone" placeholder="+92 300 1234567" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="userCategory">Project Type</label>
+                    <select id="userCategory">
+                        <option value="Luxury Residential Interior">Luxury Residential Interior</option>
+                        <option value="Italian Modular Kitchen">Italian Modular Kitchen</option>
+                        <option value="Commercial & Corporate Space">Commercial & Corporate Space</option>
+                        <option value="3D Architectural Visualization">3D Architectural Visualization</option>
+                        <option value="Full Turnkey Renovation">Full Turnkey Renovation</option>
+                        <option value="Bespoke Custom Furniture">Bespoke Custom Furniture</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="userQuestion">Your Question or Requirements</label>
+                    <textarea id="userQuestion" rows="3" placeholder="Tell us about your room size, budget, or preferred design style..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary submit-btn">
+                    <span>Send Query via WhatsApp</span>
+                    <i class="fa-solid fa-comment-dots"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= FLOATING WHATSAPP / MESSAGE BUTTON ================= -->
+    <a href="https://wa.me/923001234567?text=Hello%20DreamHome%20Interior%20%26%20Design!%20I%20would%20like%20to%20inquire%20about%20interior%20design%20services." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="floating-whatsapp" 
+       title="Inquiry via WhatsApp"
+       aria-label="WhatsApp Inquiry">
+        <div class="wa-tooltip">Inquiry via WhatsApp</div>
+        <div class="wa-icon-box">
+            <i class="fa-solid fa-comment-dots"></i>
+        </div>
+        <span class="wa-pulse"></span>
+    </a>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+

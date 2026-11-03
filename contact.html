@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | DreamHome Interior & Design</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR / HEADER ================= -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-mark"><i class="fa-solid fa-compass-drafting"></i></span>
+                <div class="logo-text">
+                    <span class="brand-name">Dream<span>Home</span></span>
+                    <span class="brand-sub">Interior & Design</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </nav>
+
+            <!-- Action Controls (Dark Mode & Ask Question) -->
+            <div class="nav-actions">
+                <!-- Theme Switcher Button -->
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle dark mode" title="Dark / Light Mode">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+
+                <!-- Message Inquiry Button with Hover WhatsApp Options -->
+                <div class="nav-msg-wrapper" id="navMsgWrapper">
+                    <button class="nav-msg-btn" id="navMsgBtn" aria-label="Message Inquiry" title="Message Inquiry">
+                        <i class="fa-regular fa-comment-dots"></i>
+                        <span class="nav-msg-text">Inquiry</span>
+                        <span class="msg-dot"></span>
+                    </button>
+                    <div class="nav-msg-dropdown" id="navMsgDropdown">
+                        <div class="dropdown-header">
+                            <div class="dropdown-msg-icon"><i class="fa-solid fa-comments"></i></div>
+                            <div>
+                                <strong>Inquiry through WhatsApp</strong>
+                                <span>Online | Instant Response</span>
+                            </div>
+                        </div>
+                        <div class="dropdown-items">
+                            <a href="https://wa.me/923001234567?text=Hello%20DreamHome!%20I%20have%20a%20general%20interior%20design%20inquiry." target="_blank" rel="noopener" class="dropdown-item">
+                                <i class="fa-regular fa-comment-dots"></i>
+                                <div>
+                                    <strong>General Inquiry</strong>
+                                    <small>Chat directly on WhatsApp</small>
+                                </div>
+                            </a>
+                            <a href="https://wa.me/923001234567?text=Hello%20DreamHome!%20I%20want%20to%20get%20an%20estimate%20and%20quotation%20for%20my%20interior." target="_blank" rel="noopener" class="dropdown-item">
+                                <i class="fa-solid fa-calculator"></i>
+                                <div>
+                                    <strong>Get Cost Estimate</strong>
+                                    <small>Send room sizes to get pricing quote</small>
+                                </div>
+                            </a>
+                            <a href="https://wa.me/923001234567?text=Hello%20DreamHome!%20I%20would%20like%20to%20book%20a%20site%20consultation%20visit." target="_blank" rel="noopener" class="dropdown-item">
+                                <i class="fa-regular fa-calendar-check"></i>
+                                <div>
+                                    <strong>Book Site Consultation</strong>
+                                    <small>Schedule an architect site visit</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ask Question Button in Header -->
+                <button class="btn btn-outline ask-btn" id="openAskModalBtn">
+                    <i class="fa-regular fa-circle-question"></i>
+                    <span>Ask Question</span>
+                </button>
+
+                <!-- Mobile Hamburger Icon -->
+                <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Drawer Overlay -->
+        <div class="nav-overlay" id="navOverlay"></div>
+    </header>
+
+    <!-- ================= CONTACT HERO BANNER ================= -->
+    <section class="page-banner">
+        <div class="ambient-glow glow-hero-left"></div>
+        <div class="ambient-glow glow-hero-right"></div>
+        <div class="container banner-container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fa-solid fa-angle-right"></i>
+                <span>Contact Us</span>
+            </div>
+            <h1 class="page-title">Let's Discuss Your <span class="title-highlight">Dream Project</span></h1>
+            <p class="page-subtitle">
+                Whether you are building a new luxury residence or remodeling an executive office, our principal architects are ready to guide you from concept to reality.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT DETAILS & MAIN FORM ================= -->
+    <section class="contact-main-section">
+        <div class="container">
+            
+            <div class="contact-layout-grid">
+
+                <!-- Left Column: Contact Cards -->
+                <div class="contact-info-col">
+                    <span class="sub-heading">Get In Touch</span>
+                    <h2 class="main-heading">Our Studio & Experience Centre</h2>
+                    <p class="contact-intro">
+                        Visit our Lahore design gallery to explore our imported marble palettes, modular kitchen hardware mechanisms, and bespoke fabric samples in person.
+                    </p>
+
+                    <div class="contact-cards-list">
+                        
+                        <!-- Phone & WhatsApp Card -->
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Phone & Direct Line</h4>
+                                <p><a href="tel:+923001234567">+92 300 1234567</a> (Mobile & WhatsApp)</p>
+                                <p><a href="tel:+924235789000">+92 42 3578 9000</a> (Studio Landline)</p>
+                            </div>
+                        </div>
+
+                        <!-- Email Card -->
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Official Email</h4>
+                                <p><a href="mailto:info@dreamhomeinterior.com">info@dreamhomeinterior.com</a></p>
+                                <p><a href="mailto:projects@dreamhomeinterior.com">projects@dreamhomeinterior.com</a></p>
+                            </div>
+                        </div>
+
+                        <!-- Office Address Card -->
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Studio & Showroom Address</h4>
+                                <p>Suite 402, Signature Executive Tower, Main Boulevard, Gulberg III, Lahore, Pakistan</p>
+                            </div>
+                        </div>
+
+                        <!-- Working Hours Card -->
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>Studio Hours</h4>
+                                <p><strong>Monday – Saturday:</strong> 10:00 AM – 8:00 PM</p>
+                                <p><strong>Sunday:</strong> Open By Prior Appointment</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Direct WhatsApp Quick Pill -->
+                    <div class="quick-wa-box">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <div>
+                            <strong>Need an Instant Response?</strong>
+                            <p>Our customer advisory team typically replies within 15 minutes on WhatsApp.</p>
+                        </div>
+                        <a href="https://wa.me/923001234567?text=Hello%20DreamHome!%20I%20have%20an%20interior%20design%20query." 
+                           target="_blank" 
+                           class="btn btn-outline wa-chat-btn">
+                            Chat Now
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Consultation Form -->
+                <div class="contact-form-col">
+                    <div class="form-wrapper-card">
+                        <div class="form-card-header">
+                            <div class="modal-icon">
+                                <i class="fa-solid fa-pencil"></i>
+                            </div>
+                            <h3>Send Us a Project Inquiry</h3>
+                            <p>Fill out the details below and we will get back to you with architectural guidance and preliminary estimates.</p>
+                        </div>
+
+                        <form id="contactPageForm" class="contact-main-form">
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactName">Your Full Name *</label>
+                                    <input type="text" id="contactName" placeholder="e.g. Malik Usman" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactPhone">Phone / WhatsApp Number *</label>
+                                    <input type="tel" id="contactPhone" placeholder="+92 300 1234567" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactEmail">Email Address</label>
+                                    <input type="email" id="contactEmail" placeholder="name@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactService">Service Type *</label>
+                                    <select id="contactService" required>
+                                        <option value="Luxury Residential Interior">Full Home / Villa Interior</option>
+                                        <option value="Italian Modular Kitchen">Italian Modular Kitchen</option>
+                                        <option value="Commercial & Corporate Space">Corporate Office / Commercial Space</option>
+                                        <option value="3D Architectural Visualization">3D Photorealistic Design</option>
+                                        <option value="Full Turnkey Renovation">Complete Renovation & Remodel</option>
+                                        <option value="Bespoke Custom Furniture">Bespoke Custom Furniture</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contactCity">Project City / Location *</label>
+                                    <input type="text" id="contactCity" placeholder="e.g. Lahore (DHA / Gulberg / Bahria)" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contactBudget">Estimated Investment Budget</label>
+                                    <select id="contactBudget">
+                                        <option value="Standard (Under 2.5 Million PKR)">Under 2.5 Million PKR</option>
+                                        <option value="Premium (2.5M - 5 Million PKR)">2.5M – 5 Million PKR</option>
+                                        <option value="Luxury (5M - 10 Million PKR)">5M – 10 Million PKR</option>
+                                        <option value="Signature Turnkey (10M+ PKR)">10 Million+ PKR (Luxury Turnkey)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contactMessage">Project Details & Requirements *</label>
+                                <textarea id="contactMessage" rows="4" placeholder="Tell us about the property size (e.g. 1 Kanal, 10 Marla, Penthouse), your preferred style (Contemporary, Classical, Minimalist), and expected completion timeframe..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                <span>Submit Inquiry via WhatsApp</span>
+                                <i class="fa-solid fa-comment-dots"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= GOOGLE MAP / STUDIO LOCATION ================= -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-card-wrapper">
+                <div class="map-header">
+                    <div class="map-header-text">
+                        <h3><i class="fa-solid fa-map-location-dot"></i> Studio Location Map</h3>
+                        <p>Main Boulevard, Gulberg III, Lahore, Pakistan</p>
+                    </div>
+                    <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-glass btn-sm">
+                        <span>Open in Google Maps</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+                <!-- Interactive Responsive Map Container -->
+                <div class="map-iframe-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108872.24647306263!2d74.25642921590487!3d31.51034440537489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919045a49479b1d%3A0x6b7012fb10878e8b!2sGulberg%20III%2C%20Lahore%2C%20Punjab!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
+                        width="100%" 
+                        height="380" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FREQUENTLY ASKED QUESTIONS (FAQ) ================= -->
+    <section class="contact-faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-heading">Need Quick Answers?</span>
+                <h2 class="main-heading">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-accordion-grid">
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you offer free on-site design consultations?</h4>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, our lead architects offer an initial complimentary discovery meeting at our Gulberg Studio or directly at your site to understand your vision, take initial measurements, and outline scope.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Can I see 3D realistic views before construction starts?</h4>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. We provide high-definition 4K photorealistic 3D visual renders showing the exact materials, paint colors, lighting, and custom furniture so you know exactly what your finished space will look like.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What are your typical project execution timelines?</h4>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Turnaround times depend on scope: Modular kitchens typically take 3 to 4 weeks. Full 1-Kanal villa turnkey execution takes between 3 to 6 months with guaranteed handover dates in our written contract.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>Do you take projects outside Lahore?</h4>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We undertake turnkey architectural and interior projects in Islamabad, Rawalpindi, Karachi, Faisalabad, and Sialkot, with dedicated on-site supervisory teams.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer" id="contact">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo-text">
+                    <span class="brand-name">Dream<span>Home</span></span>
+                    <span class="brand-sub">Interior & Design</span>
+                </div>
+                <p>Bringing dream interiors to reality with precision architecture, lighting, and interior craftsmanship.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Inquiries</h4>
+                <p><i class="fa-solid fa-envelope"></i> info@dreamhomeinterior.com</p>
+                <p><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
+                <p><i class="fa-solid fa-location-dot"></i> Gulberg III, Lahore, Pakistan</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 DreamHome Interior & Design. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ================= ASK QUESTION MODAL POPUP ================= -->
+    <div class="modal-backdrop" id="askModal">
+        <div class="modal-box">
+            <button class="modal-close" id="closeAskModalBtn" aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fa-regular fa-comments"></i>
+                </div>
+                <h3>Ask a Question</h3>
+                <p>Have an idea or need an estimate for your dream space? Send us a quick query!</p>
+            </div>
+            
+            <form id="askForm" class="modal-form">
+                <div class="form-group">
+                    <label for="userName">Your Full Name</label>
+                    <input type="text" id="userName" placeholder="e.g. Ali Ahmed" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="userPhone">Phone / WhatsApp Number</label>
+                    <input type="tel" id="userPhone" placeholder="+92 300 1234567" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="userCategory">Project Type</label>
+                    <select id="userCategory">
+                        <option value="Luxury Residential Interior">Luxury Residential Interior</option>
+                        <option value="Italian Modular Kitchen">Italian Modular Kitchen</option>
+                        <option value="Commercial & Corporate Space">Commercial & Corporate Space</option>
+                        <option value="3D Architectural Visualization">3D Architectural Visualization</option>
+                        <option value="Full Turnkey Renovation">Full Turnkey Renovation</option>
+                        <option value="Bespoke Custom Furniture">Bespoke Custom Furniture</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="userQuestion">Your Question or Requirements</label>
+                    <textarea id="userQuestion" rows="3" placeholder="Tell us about your room size, budget, or preferred design style..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary submit-btn">
+                    <span>Send Query via WhatsApp</span>
+                    <i class="fa-solid fa-comment-dots"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= FLOATING WHATSAPP / MESSAGE BUTTON ================= -->
+    <a href="https://wa.me/923001234567?text=Hello%20DreamHome%20Interior%20%26%20Design!%20I%20would%20like%20to%20inquire%20about%20interior%20design%20services." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="floating-whatsapp" 
+       title="Inquiry via WhatsApp"
+       aria-label="WhatsApp Inquiry">
+        <div class="wa-tooltip">Inquiry via WhatsApp</div>
+        <div class="wa-icon-box">
+            <i class="fa-solid fa-comment-dots"></i>
+        </div>
+        <span class="wa-pulse"></span>
+    </a>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+

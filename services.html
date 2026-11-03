@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | DreamHome Interior & Design</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= NAVBAR / HEADER ================= -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-mark"><i class="fa-solid fa-compass-drafting"></i></span>
+                <div class="logo-text">
+                    <span class="brand-name">Dream<span>Home</span></span>
+                    <span class="brand-sub">Interior & Design</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link active">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Action Controls (Dark Mode & Ask Question) -->
+            <div class="nav-actions">
+                <!-- Theme Switcher Button -->
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle dark mode" title="Dark / Light Mode">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+
+                <!-- Message Inquiry Button with Hover WhatsApp Options -->
+                <div class="nav-msg-wrapper" id="navMsgWrapper">
+                    <button class="nav-msg-btn" id="navMsgBtn" aria-label="Message Inquiry" title="Message Inquiry">
+                        <i class="fa-regular fa-comment-dots"></i>
+                        <span class="nav-msg-text">Inquiry</span>
+                        <span class="msg-dot"></span>
+                    </button>
+                    <div class="nav-msg-dropdown" id="navMsgDropdown">
+                        <div class="dropdown-header">
+                            <div class="dropdown-msg-icon"><i class="fa-solid fa-comments"></i></div>
+                            <div>
+                                <strong>Inquiry through WhatsApp</strong>
+                                <span>Online | Instant Response</span>
+                            </div>
+                        </div>
+                        <div class="dropdown-items">
+                            <a href="https://wa.me/923001234567?text=Hello%20DreamHome!%20I%20have%20a%20general%20interior%20design%20inquiry." target="_blank" rel="noopener" class="dropdown-item">
+                                <i class="fa-regular fa-comment-dots"></i>
+                                <div>
+                                    <strong>General Inquiry</strong>
+                                    <small>Chat directly on WhatsApp</small>
+                                </div>
+                            </a>
+                            <a href="https://wa.me/923001234567?text=Hello%20DreamHome!%20I%20want%20to%20get%20an%20estimate%20and%20quotation%20for%20my%20interior." target="_blank" rel="noopener" class="dropdown-item">
+                                <i class="fa-solid fa-calculator"></i>
+                                <div>
+                                    <strong>Get Cost Estimate</strong>
+                                    <small>Send room sizes to get pricing quote</small>
+                                </div>
+                            </a>
+                            <a href="https://wa.me/923001234567?text=Hello%20DreamHome!%20I%20would%20like%20to%20book%20a%20site%20consultation%20visit." target="_blank" rel="noopener" class="dropdown-item">
+                                <i class="fa-regular fa-calendar-check"></i>
+                                <div>
+                                    <strong>Book Site Consultation</strong>
+                                    <small>Schedule an architect site visit</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ask Question Button in Header -->
+                <button class="btn btn-outline ask-btn" id="openAskModalBtn">
+                    <i class="fa-regular fa-circle-question"></i>
+                    <span>Ask Question</span>
+                </button>
+
+                <!-- Mobile Hamburger Icon -->
+                <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Drawer Overlay -->
+        <div class="nav-overlay" id="navOverlay"></div>
+    </header>
+
+    <!-- ================= SERVICES PAGE HERO BANNER ================= -->
+    <section class="page-banner">
+        <div class="ambient-glow glow-hero-left"></div>
+        <div class="ambient-glow glow-hero-right"></div>
+        <div class="container banner-container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fa-solid fa-angle-right"></i>
+                <span>Our Services</span>
+            </div>
+            <h1 class="page-title">Bespoke Architectural & <span class="title-highlight">Interior Services</span></h1>
+            <p class="page-subtitle">
+                From initial 3D visualization to turnkey project handover, we engineer extraordinary living spaces with unmatched precision and Italian aesthetic perfection.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= DETAILED SERVICES SHOWCASE ================= -->
+    <section class="services-detail-section">
+        <div class="container">
+            
+            <div class="services-detail-grid">
+
+                <!-- Service 1: Residential Living -->
+                <div class="service-detail-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80" alt="Luxury Residential Interior">
+                        <span class="service-tag">Most Popular</span>
+                    </div>
+                    <div class="service-card-body">
+                        <div class="card-icon"><i class="fa-solid fa-couch"></i></div>
+                        <h2>Luxury Residential Interior</h2>
+                        <p>Complete interior transformation for villas, penthouses, and modern apartments. We balance aesthetic grandeur with functional family living.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-check"></i> Master bedroom & living room architecture</li>
+                            <li><i class="fa-solid fa-check"></i> Architectural ambient & cove lighting</li>
+                            <li><i class="fa-solid fa-check"></i> False ceilings, wall paneling & fluted walls</li>
+                            <li><i class="fa-solid fa-check"></i> Complete color schemes & fabric selection</li>
+                        </ul>
+                        <button class="btn btn-outline service-inquire-btn" data-service="Luxury Residential Interior">
+                            <span>Inquire for Residential</span>
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 2: Modular Kitchens -->
+                <div class="service-detail-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Italian Modular Kitchens">
+                        <span class="service-tag">Premium Design</span>
+                    </div>
+                    <div class="service-card-body">
+                        <div class="card-icon"><i class="fa-solid fa-kitchen-set"></i></div>
+                        <h2>Italian Modular Kitchens</h2>
+                        <p>Ultra-modern kitchen cabinetry designed with ergonomic German hardware, anti-fingerprint acrylic finishes, and natural quartz countertops.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-check"></i> Island, L-Shape & U-Shape customized layouts</li>
+                            <li><i class="fa-solid fa-check"></i> Soft-close Blum/Hafele hydraulic fittings</li>
+                            <li><i class="fa-solid fa-check"></i> Built-in appliance integration & pantry units</li>
+                            <li><i class="fa-solid fa-check"></i> Water-resistant & fire-retardant materials</li>
+                        </ul>
+                        <button class="btn btn-outline service-inquire-btn" data-service="Italian Modular Kitchen">
+                            <span>Inquire for Kitchen</span>
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 3: Commercial & Office -->
+                <div class="service-detail-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Commercial Office Interior">
+                        <span class="service-tag">Corporate</span>
+                    </div>
+                    <div class="service-card-body">
+                        <div class="card-icon"><i class="fa-solid fa-building"></i></div>
+                        <h2>Commercial & Corporate Spaces</h2>
+                        <p>High-end corporate offices, executive suites, boutique retail shops, and luxury cafes designed to elevate your brand reputation.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-check"></i> Executive cabins & conference rooms</li>
+                            <li><i class="fa-solid fa-check"></i> Acoustic soundproofing & smart partitions</li>
+                            <li><i class="fa-solid fa-check"></i> Ergonomic workstations & collaborative zones</li>
+                            <li><i class="fa-solid fa-check"></i> Brand identity integrated reception areas</li>
+                        </ul>
+                        <button class="btn btn-outline service-inquire-btn" data-service="Commercial & Corporate Space">
+                            <span>Inquire for Commercial</span>
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 4: 3D Visualization -->
+                <div class="service-detail-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="3D Architectural Visualization">
+                        <span class="service-tag">Ultra HD</span>
+                    </div>
+                    <div class="service-card-body">
+                        <div class="card-icon"><i class="fa-solid fa-vr-cardboard"></i></div>
+                        <h2>3D Architectural Visualization</h2>
+                        <p>See your space in realistic 4K 3D renders before spending a single rupee on construction. Walk through your future home virtually.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-check"></i> Photorealistic daytime & night lighting renders</li>
+                            <li><i class="fa-solid fa-check"></i> Accurate material, tile, and texture mapping</li>
+                            <li><i class="fa-solid fa-check"></i> 360-degree virtual tour & walkthroughs</li>
+                            <li><i class="fa-solid fa-check"></i> 2D working floorplans with dimensioning</li>
+                        </ul>
+                        <button class="btn btn-outline service-inquire-btn" data-service="3D Architectural Visualization">
+                            <span>Inquire for 3D Renders</span>
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 5: Turnkey Renovation -->
+                <div class="service-detail-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Turnkey Home Renovation">
+                        <span class="service-tag">Hassle-Free</span>
+                    </div>
+                    <div class="service-card-body">
+                        <div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h2>Full Turnkey Renovation</h2>
+                        <p>Complete remodel from demolition to final polishing. We manage all civil work, plumbing, painting, flooring, and electrical with zero stress for you.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-check"></i> On-site project management & daily supervision</li>
+                            <li><i class="fa-solid fa-check"></i> Flooring replacement (Italian Marble, Wooden, Porcelain)</li>
+                            <li><i class="fa-solid fa-check"></i> Premium paint & metallic decorative textures</li>
+                            <li><i class="fa-solid fa-check"></i> Strict adherence to project delivery deadlines</li>
+                        </ul>
+                        <button class="btn btn-outline service-inquire-btn" data-service="Full Turnkey Renovation">
+                            <span>Inquire for Renovation</span>
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 6: Custom Furniture & Decor -->
+                <div class="service-detail-card">
+                    <div class="service-card-img">
+                        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80" alt="Bespoke Custom Furniture">
+                        <span class="service-tag">Artisanal</span>
+                    </div>
+                    <div class="service-card-body">
+                        <div class="card-icon"><i class="fa-solid fa-chair"></i></div>
+                        <h2>Bespoke Custom Furniture</h2>
+                        <p>Handcrafted sofas, dining tables, consoles, and wardrobes tailored to the exact dimensions and aesthetic theme of your dream space.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-check"></i> Solid hardwood, stainless steel & brass trims</li>
+                            <li><i class="fa-solid fa-check"></i> Luxury imported velvet, boucle & leatherette upholstery</li>
+                            <li><i class="fa-solid fa-check"></i> Customized accent chairs & statement consoles</li>
+                            <li><i class="fa-solid fa-check"></i> 5-Year structural warranty on timber frames</li>
+                        </ul>
+                        <button class="btn btn-outline service-inquire-btn" data-service="Bespoke Custom Furniture">
+                            <span>Inquire for Furniture</span>
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= HOW WE WORK (PROCESS) ================= -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="sub-heading">Seamless Journey</span>
+                <h2 class="main-heading">How We Bring Your Vision to Life</h2>
+            </div>
+
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-icon"><i class="fa-solid fa-comments"></i></div>
+                    <h3>Consultation</h3>
+                    <p>We discuss your vision, functional requirements, timeline, and budget preferences in detail.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                    <h3>Concept & 3D</h3>
+                    <p>Our architects develop layout plans and photorealistic 3D visuals of your space.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-icon"><i class="fa-solid fa-swatchbook"></i></div>
+                    <h3>Material Selection</h3>
+                    <p>You select and approve luxury wood veneers, marbles, fabrics, and hardware finishes.</p>
+                </div>
+
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-icon"><i class="fa-solid fa-key"></i></div>
+                    <h3>Turnkey Handover</h3>
+                    <p>Our master craftsmen execute the design with precision, handing over a pristine dream space.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CTA BANNER ================= -->
+    <section class="services-cta-section">
+        <div class="container">
+            <div class="cta-banner-box">
+                <div class="cta-content">
+                    <h2>Ready to Build Your Dream Sanctuary?</h2>
+                    <p>Get in touch with our lead architects today for a personalized design consultation.</p>
+                </div>
+                <div class="cta-actions">
+                    <button class="btn btn-primary" id="openCtaModalBtn">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <span>Book Consultation</span>
+                    </button>
+                    <a href="https://wa.me/923001234567?text=Hello%20DreamHome!%20I%20want%20to%20book%20a%20design%20consultation." 
+                       target="_blank" 
+                       class="btn btn-glass">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>WhatsApp Us</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer" id="contact">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo-text">
+                    <span class="brand-name">Dream<span>Home</span></span>
+                    <span class="brand-sub">Interior & Design</span>
+                </div>
+                <p>Bringing dream interiors to reality with precision architecture, lighting, and interior craftsmanship.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Inquiries</h4>
+                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:info@dreamhomeinterior.com">info@dreamhomeinterior.com</a></p>
+                <p><i class="fa-solid fa-phone"></i> <a href="tel:+923001234567">+92 300 1234567</a></p>
+                <p><i class="fa-solid fa-location-dot"></i> Gulberg III, Lahore, Pakistan</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 DreamHome Interior & Design. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ================= ASK QUESTION MODAL POPUP ================= -->
+    <div class="modal-backdrop" id="askModal">
+        <div class="modal-box">
+            <button class="modal-close" id="closeAskModalBtn" aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fa-regular fa-comments"></i>
+                </div>
+                <h3>Ask a Question</h3>
+                <p>Have an idea or need an estimate for your dream space? Send us a quick query!</p>
+            </div>
+            
+            <form id="askForm" class="modal-form">
+                <div class="form-group">
+                    <label for="userName">Your Full Name</label>
+                    <input type="text" id="userName" placeholder="e.g. Ali Ahmed" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="userPhone">Phone / WhatsApp Number</label>
+                    <input type="tel" id="userPhone" placeholder="+92 300 1234567" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="userCategory">Project Type</label>
+                    <select id="userCategory">
+                        <option value="Luxury Residential Interior">Luxury Residential Interior</option>
+                        <option value="Italian Modular Kitchen">Italian Modular Kitchen</option>
+                        <option value="Commercial & Corporate Space">Commercial & Corporate Space</option>
+                        <option value="3D Architectural Visualization">3D Architectural Visualization</option>
+                        <option value="Full Turnkey Renovation">Full Turnkey Renovation</option>
+                        <option value="Bespoke Custom Furniture">Bespoke Custom Furniture</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="userQuestion">Your Question or Requirements</label>
+                    <textarea id="userQuestion" rows="3" placeholder="Tell us about your room size, budget, or preferred design style..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary submit-btn">
+                    <span>Send Query via WhatsApp</span>
+                    <i class="fa-solid fa-comment-dots"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ================= FLOATING WHATSAPP / MESSAGE BUTTON ================= -->
+    <a href="https://wa.me/923001234567?text=Hello%20DreamHome%20Interior%20%26%20Design!%20I%20would%20like%20to%20inquire%20about%20interior%20design%20services." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="floating-whatsapp" 
+       title="Inquiry via WhatsApp"
+       aria-label="WhatsApp Inquiry">
+        <div class="wa-tooltip">Inquiry via WhatsApp</div>
+        <div class="wa-icon-box">
+            <i class="fa-solid fa-comment-dots"></i>
+        </div>
+        <span class="wa-pulse"></span>
+    </a>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
